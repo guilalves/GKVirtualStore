@@ -9,7 +9,9 @@ class ListaProdutos(admin.ModelAdmin):
                     'tamanho',
                     'data_de_publicacao',
                     'preco')
-
     list_display_links = ('id', 'nome_do_produto')
+    list_filter = ('modelo', )
+    list_per_page = 10
+    search_fields = ('nome_do_produto', )
 
 admin.site.register(Produto, ListaProdutos)
