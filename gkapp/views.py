@@ -2,9 +2,13 @@ from django.shortcuts import  get_list_or_404, get_object_or_404, render
 
 from .models import Produto
 
+"""
+def login(request):
+    return render(request, 'login.html')
 
+"""
 def index(request):
-    produtos = Produto.objects.all()
+    produtos = Produto.objects.filter(publicado=True)
 
     dados = {
         'produtos': produtos
