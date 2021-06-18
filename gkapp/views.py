@@ -8,7 +8,7 @@ def login(request):
 
 """
 def index(request):
-    produtos = Produto.objects.filter(publicado=True)
+    produtos = Produto.objects.order_by('-data_de_publicacao').filter(publicado=True)
 
     dados = {
         'produtos': produtos

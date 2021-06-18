@@ -8,10 +8,12 @@ class ListaProdutos(admin.ModelAdmin):
                     'modelo',
                     'tamanho',
                     'data_de_publicacao',
-                    'preco')
+                    'preco',
+                    'publicado')
     list_display_links = ('id', 'nome_do_produto')
     list_filter = ('modelo', )
     list_per_page = 10
+    list_editable = ('publicado', )
     search_fields = ('nome_do_produto', )
 
 admin.site.register(Produto, ListaProdutos)
