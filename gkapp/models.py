@@ -2,6 +2,7 @@ from datetime import datetime
 
 from django.db import models
 
+
 class Produto(models.Model):
     data_de_publicacao = models.DateTimeField(default=datetime.now(), blank=True)
     informacoes = models.TextField(max_length=200)

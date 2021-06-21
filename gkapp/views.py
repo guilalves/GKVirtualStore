@@ -1,4 +1,4 @@
-from django.shortcuts import  get_list_or_404, get_object_or_404, render
+from django.shortcuts import get_object_or_404, render
 
 from .models import Produto
 
@@ -7,6 +7,8 @@ def login(request):
     return render(request, 'login.html')
 
 """
+
+
 def index(request):
     produtos = Produto.objects.order_by('-data_de_publicacao').filter(publicado=True)
 
