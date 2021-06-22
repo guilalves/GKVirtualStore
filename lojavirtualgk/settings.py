@@ -86,6 +86,10 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
+# Media
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 # Static files (CSS, JavaScript, Images)
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'lojavirtualgk/static')
